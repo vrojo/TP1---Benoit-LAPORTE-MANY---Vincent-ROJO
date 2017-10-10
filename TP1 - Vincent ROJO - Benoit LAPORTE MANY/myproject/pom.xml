@@ -53,11 +53,13 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 				</executions>
 				
 				<configuration>
-					<mainClass>dblab.hello.App</mainClass>
-					<!--<mainClass>ex01C.Log4jBasics</mainClass>-->
-					<!--<mainClass>ex01D.C</mainClass-->
-					<!--<mainClass>ex01E.Exercice01E</mainClass>-->
-					<!--<mainClass>ex01F.ToStringOverloading</mainClass>-->
+					<mainClass>ex01F.ToStringOverloading</mainClass>
+					<!--Liste des mains
+						<mainClass>dblab.hello.App</mainClass>
+						<mainClass>ex01C.Log4jBasics</mainClass>
+						<mainClass>ex01D.C</mainClass
+						<mainClass>ex01E.Exercice01E</mainClass>
+					-->
 					<arguments>
 						<argument>foo</argument>
 						<argument>bar</argument>

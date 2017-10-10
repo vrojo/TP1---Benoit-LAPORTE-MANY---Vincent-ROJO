@@ -3,13 +3,13 @@ package ex01F;
 import org.apache.log4j.Logger; 
  
  
-public class Circle {
+public class CircleTest {
 	protected static Logger log =  Logger.getLogger(Circle.class);
 	int x;
 	int y;
 	int radius;
 
-	public Circle(int x, int y, int radius)   {
+	public CircleTest(int x, int y, int radius)   {
 		this.x = x;
 		this.y = y;
 		this.radius = radius;

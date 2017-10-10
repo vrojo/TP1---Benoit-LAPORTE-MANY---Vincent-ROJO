@@ -1,6 +1,6 @@
 package ex01D; 
  
-public class C {
+public class PassageParametres {
 	
 	public static void method1(int i, StringBuffer s)    {
 		i++; s.append("d");   
