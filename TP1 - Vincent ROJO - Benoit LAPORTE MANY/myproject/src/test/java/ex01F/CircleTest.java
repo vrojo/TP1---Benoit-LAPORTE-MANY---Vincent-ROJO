@@ -1,28 +1,46 @@
 package ex01F; 
  
-import org.apache.log4j.Logger; 
- 
- 
-public class CircleTest {
-	protected static Logger log =  Logger.getLogger(Circle.class);
-	int x;
-	int y;
-	int radius;
+import junit.framework.Test; 
+import junit.framework.TestCase; 
+import junit.framework.TestSuite;
 
-	public CircleTest(int x, int y, int radius)   {
-		this.x = x;
-		this.y = y;
-		this.radius = radius;
-	}
+import org.apache.log4j.*;
 
-	public String toString()   {
-		return(String.format("Circle with center (%d,%d) and radius %d (Perimter is %,.2f)",this.x,this.y,this.radius,(2 * java.lang.Math.PI * this.radius)));
+/** 
+* Unit test for simple App. 
+*/ 
+public class CircleTest extends TestCase { 
+	protected static Logger log =  Logger.getLogger(CircleTest.class);
+	
+	/** 
+	* Create the test case 
+	* 
+	* @param testName name of the test case 
+	*/ 
+	public CircleTest( String testName ){
+		super( testName ); 
 	}
 	
-	/**
-	* On tente en changeant le nom de la methode, on obtient comme resultat : ex01F.Circle@527adabd *
-	*/
-	public String toStringNewName()   {
-		return(String.format("Circle with center (%d,%d) and radius %d (Perimter is %,.2f)",this.x,this.y,this.radius,(2 * java.lang.Math.PI * this.radius)));
+	/** 
+	* @return the suite of tests being tested 
+	*/ 
+	public static Test suite(){ 
+		System.out.println("CircleTest"); 
+		return new TestSuite( CircleTest.class );
+	} 
+	/** 
+	* Rigourous Test :-) 
+	*/ 
+	public void testApp(){
+		log.debug("We check the values entered");
+		Circle c1 = new Circle(0,0, 5);
+		assertTrue(c1.getx() == 0);
+		assertTrue(c1.gety() == 0);
+		assertTrue(c1.getradius() == 5);
+		
+		Circle c2 = new Circle(0,0, 3);
+		assertTrue(c2.getx() == 0);
+		assertTrue(c2.gety() == 0);
+		assertTrue(c2.getradius() == 3);
 	}
 }

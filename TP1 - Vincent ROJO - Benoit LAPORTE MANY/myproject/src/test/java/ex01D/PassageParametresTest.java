@@ -32,7 +32,7 @@ public class PassageParametresTest extends TestCase {
 	* Rigourous Test :-) 
 	*/ 
 	public void testApp(){
-		log.debug("COUCOU 22");
+		log.debug("We test the call of method1(0, \"abc\")");
 		int i = 0;
 		StringBuffer s = new StringBuffer("abc");
 		PassageParametres C = new PassageParametres();
